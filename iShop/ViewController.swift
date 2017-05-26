@@ -9,17 +9,52 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet var regView: UIView!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var enterView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 
+    @IBAction func indexChanged(sender: UISegmentedControl) {
+        switch segmentedControl.selectedSegmentIndex
+        {
+        case 0:
+            enterView.hidden = false;
+        case 1:
+            enterView.hidden = true;
+
+        default:
+            break;
+        }
+    }
+    
+    
+    @IBAction func enter(sender: AnyObject) {
+        performSegueWithIdentifier("Catalog", sender:
+            nil)
+    }
+    
+    @IBAction func order(sender: AnyObject) {
+        performSegueWithIdentifier("Map", sender:
+            nil)
+    }
+    
+    @IBAction func backToMenu(sender: AnyObject) {
+        performSegueWithIdentifier("Back", sender:
+            nil)
+    }
+    
+    @IBAction func exit(sender: AnyObject) {
+        exit(0);
+    }
+    
 }
 
