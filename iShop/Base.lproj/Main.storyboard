@@ -57,6 +57,9 @@
                                     <color key="titleColor" red="0.0" green="0.57647058819999997" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="register:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jso-d2-b4j"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Согласен с правилами" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9A-gr-e5Z">
                                 <rect key="frame" x="176" y="298" width="184" height="21"/>
@@ -65,13 +68,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0uV-Oe-FmA">
-                                <rect key="frame" x="0.0" y="91" width="600" height="321"/>
+                                <rect key="frame" x="0.0" y="96" width="600" height="321"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sBY-Mk-EJx">
-                                        <rect key="frame" x="204" y="122" width="193" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Логин" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MNF-h0-W3n">
                                         <rect key="frame" x="204" y="73" width="193" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -85,9 +83,13 @@
                                         </state>
                                         <connections>
                                             <action selector="enter:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Cja-aw-VLD"/>
-                                            <segue destination="09S-mY-cgY" kind="presentation" identifier="Catalog" id="lIZ-HA-gZw"/>
                                         </connections>
                                     </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sBY-Mk-EJx">
+                                        <rect key="frame" x="204" y="122" width="193" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="deviceRGB"/>
                             </view>
@@ -95,9 +97,17 @@
                         <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="deviceRGB"/>
                     </view>
                     <connections>
+                        <outlet property="agree" destination="v3e-m9-gSx" id="1tD-Yj-tyG"/>
+                        <outlet property="email" destination="aGj-e8-jgq" id="4b1-dW-97e"/>
+                        <outlet property="enterLogin" destination="MNF-h0-W3n" id="6Sg-Q6-Gb7"/>
+                        <outlet property="enterPass" destination="sBY-Mk-EJx" id="ydE-XP-pA0"/>
                         <outlet property="enterView" destination="0uV-Oe-FmA" id="e6e-7x-TjI"/>
+                        <outlet property="login" destination="Eqc-mV-gPb" id="EO0-1O-Pgk"/>
+                        <outlet property="pass" destination="UZc-Vk-HBQ" id="AdC-C4-gJo"/>
                         <outlet property="regView" destination="kh9-bI-dsS" id="3sY-g3-JuL"/>
+                        <outlet property="repPass" destination="6Dr-qn-gXF" id="A5H-m2-RH1"/>
                         <outlet property="segmentedControl" destination="2cb-4s-CQa" id="uae-H1-ALg"/>
+                        <segue destination="09S-mY-cgY" kind="presentation" identifier="Catalog" id="9zM-fD-VTx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -250,6 +260,6 @@
         <image name="BG" width="1082" height="1922"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lIZ-HA-gZw"/>
+        <segue reference="9zM-fD-VTx"/>
     </inferredMetricsTieBreakers>
 </document>

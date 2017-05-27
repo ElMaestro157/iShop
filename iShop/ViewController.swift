@@ -10,18 +10,33 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet var regView: UIView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var login: UITextField!
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var pass: UITextField!
+    @IBOutlet weak var repPass: UITextField!
+    @IBOutlet weak var agree: UISwitch!
+    @IBOutlet var regView: UIView!
     @IBOutlet weak var enterView: UIView!
+    @IBOutlet weak var enterLogin: UITextField!
+    @IBOutlet weak var enterPass: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
+    
+    @IBAction func register(sender: AnyObject) {
+        if (!login.text.isEmpty && !pass.text.isEmpty && pass.text == repPass.text) {
+            let users = NSUserDefaults.standardUserDefaults()
+            users.setObject(login.text, forKey: "login")
+            users.setObject(pass.text, forKey: "pass")
+            users.setObject(email.text, forKey: "email")
+        }
+    }
 
     @IBAction func indexChanged(sender: UISegmentedControl) {
         switch segmentedControl.selectedSegmentIndex
@@ -37,8 +52,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func enter(sender: AnyObject) {
-        performSegueWithIdentifier("Catalog", sender:
-            nil)
+        let users = NSUserDefaults.standardUserDefaults()
+        
+        if (users.objectForKey("login")?.isEqualToString(enterLogin.text).boolValue == true && users.objectForKey("pass")?.isEqualToString(enterPass.text).boolValue == true) {
+            performSegueWithIdentifier("Catalog", sender: nil)
+        }
     }
     
     @IBAction func order(sender: AnyObject) {
