@@ -14,6 +14,7 @@
 		84C355FE1ED8B1F8005FC1D0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84C355FD1ED8B1F8005FC1D0 /* Images.xcassets */; };
 		84C356011ED8B1F8005FC1D0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C355FF1ED8B1F8005FC1D0 /* LaunchScreen.xib */; };
 		84C3560D1ED8B1F8005FC1D0 /* iShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3560C1ED8B1F8005FC1D0 /* iShopTests.swift */; };
+		84EEBFD71ED9125300A36723 /* iPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84EEBFD61ED9125300A36723 /* iPlist.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		84C356061ED8B1F8005FC1D0 /* iShopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iShopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C3560B1ED8B1F8005FC1D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84C3560C1ED8B1F8005FC1D0 /* iShopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iShopTests.swift; sourceTree = "<group>"; };
+		84EEBFD61ED9125300A36723 /* iPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = iPlist.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		84C355F01ED8B1F8005FC1D0 /* iShop */ = {
 			isa = PBXGroup;
 			children = (
+				84EEBFD61ED9125300A36723 /* iPlist.plist */,
 				84C355F31ED8B1F8005FC1D0 /* AppDelegate.swift */,
 				84C355F81ED8B1F8005FC1D0 /* ViewController.swift */,
 				84C355FA1ED8B1F8005FC1D0 /* Main.storyboard */,
@@ -198,6 +201,7 @@
 				84C355FC1ED8B1F8005FC1D0 /* Main.storyboard in Resources */,
 				84C356011ED8B1F8005FC1D0 /* LaunchScreen.xib in Resources */,
 				84C355FE1ED8B1F8005FC1D0 /* Images.xcassets in Resources */,
+				84EEBFD71ED9125300A36723 /* iPlist.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +413,7 @@
 				84C356121ED8B1F8005FC1D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84C356131ED8B1F8005FC1D0 /* Build configuration list for PBXNativeTarget "iShopTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				84C356151ED8B1F8005FC1D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
