@@ -36,7 +36,6 @@ class ViewController: UIViewController {
         }
     }
     
-    
     @IBAction func enter(sender: AnyObject) {
         performSegueWithIdentifier("Catalog", sender:
             nil)
